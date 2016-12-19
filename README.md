@@ -2,5 +2,6 @@
 Experimental_Python
 
 
-** Linear Regression **
+**Linear Regression**
+
 Example of how to make linear regression in python using scipy
