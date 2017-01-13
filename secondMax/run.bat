@@ -1,0 +1,1 @@
+python secondMaxInAList.py < input 
