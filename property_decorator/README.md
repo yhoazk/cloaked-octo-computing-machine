@@ -103,6 +103,25 @@ class Celsius:
             raise ValueError("Temperature below -273 not possible")
         self._temperature = value
 
-    temperature = 
+    temperature = property(get_temperature, set_temperature) 
 
 ```
+The last line of the above code attaches the two methods to the 
+object instance. Any code that retrieves the value of `temperature`
+will automatically call `get_temperature()` instead of a dictionart
+loop-up. Similarly, any code that assigns a value to `temperature
+will automatically call `set_temperature()`.
+
+
+`property` is a built in function that creates and returns  a property
+object. The signature of this function is:
+
+```python
+property(fget=None, fset=None, fdel=None, doc=None)
+```
+Where:
+- `fget`: get the value of the attribute
+- `fset`: set the value of the attribute
+- `fdel`: Function to delete the attribute
+- `doc`: A string, like a comment 
+
