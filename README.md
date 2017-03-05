@@ -37,3 +37,33 @@ sudo /opt/anaconda3/bin/conda remove pyqt
 sudo /opt/anaconda3/bin/conda install qt
 sudo /opt/anaconda3/bin/conda install pyqt
 ```
+
+## Notes 
+
+#### References in python
+
+Here is an example on how python hides memory:
+```python
+def dict_modifier(d, key):
+  d.pop(key, None)
+
+sample_dict = {'some_key': 'some value'}
+dict_modifier(sample_dict, 'some_key')
+print(sample_dict)  # {}
+```
+
+The function `dict_modifier` removes a value form the dictionary passed to it, it handles the dictionary as a reference.
+But python not always takes the arguments as references for example:
+```python
+def adder(n):
+  n += 1
+
+i = 1
+adder(i)
+print(i)  # 1
+```
+The primitives are not passed as references, but rather as copies.
+
+
+
+
