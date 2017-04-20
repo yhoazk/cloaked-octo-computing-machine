@@ -40,6 +40,12 @@ sudo /opt/anaconda3/bin/conda install pyqt
 
 ## Notes 
 
+### ternary operator:
+```
+t="10" if 4 < 5 else "22"
+```
+
+
 #### References in python
 
 Here is an example on how python hides memory:
@@ -62,7 +68,7 @@ i = 1
 adder(i)
 print(i)  # 1
 ```
-The primitives are not passed as references, but rather as copies.
+The primitives are **not** passed as references, but rather as copies.
 
 
 
