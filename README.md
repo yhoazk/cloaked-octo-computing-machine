@@ -41,7 +41,7 @@ sudo /opt/anaconda3/bin/conda install pyqt
 ## Notes 
 
 ### ternary operator:
-```
+```python
 t="10" if 4 < 5 else "22"
 ```
 
