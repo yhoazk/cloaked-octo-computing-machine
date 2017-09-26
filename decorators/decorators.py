@@ -61,7 +61,7 @@ print("Example #4: a decorator generator")
 
 """
 Passing arguments to decorators
-This example demostrates how to pass a parameter to a decorator, to make it more
+This example demostrates how to pass a parameter to a decorator, to make it
 generic
 """
 
