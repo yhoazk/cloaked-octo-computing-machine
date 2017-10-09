@@ -3,7 +3,7 @@
 There are 3 different types of class methods for a class:
 - "Regular"
 - class
-- static 
+- static
 
 For example the demo class:
 ```python
@@ -31,9 +31,9 @@ Not only can they modify object state, instance methods can also access the
 class itself through the `self.__class__` attribute. This means instance
 methods can also modify class state.
 
-> >>> obj = MyClass()
-> >>> obj.method()
-> ('instance method called', <MyClass instance at 0x101a2f4c8>)
+> obj = MyClass() <br>
+ obj.method() <br>
+('instance method called', MyClass instance at 0x101a2f4c8)
 
 
 Here Python replaces the `this` with a pointer to the instance.
@@ -47,8 +47,8 @@ a `cls` parameter that points to the class -- and not the object instance--
  when the method is called.
 
 Because the class method can only access to this `cls` argument, it can't
-modify object instance state. That would require access to `self`. 
-However, class methods can still modify class state that applies accross 
+modify object instance state. That would require access to `self`.
+However, class methods can still modify class state that applies accross
 all instnaces of the class.
 
 ## Static Methods
@@ -103,6 +103,3 @@ interface for your classes self-documenting and symplify its usage.
 
 
 ### When to use static methods
-
-
-
