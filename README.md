@@ -72,4 +72,12 @@ The primitives are **not** passed as references, but rather as copies.
 
 
 
+#### Get import paths
+[https://stackoverflow.com/questions/5751292/how-to-get-current-import-paths-in-python](https://stackoverflow.com/questions/5751292/how-to-get-current-import-paths-in-python)
 
+The path locations that python cheks by default can be inspected in sys.path.
+
+```python
+import sys
+print sys.path
+```
