@@ -4,7 +4,7 @@ import random
 from collections import deque
 
 class quick_lpf:
-    def __init__(self, nT1=5, nT2=15):
+    def __init__(self, nT1=5, nT2=25):
         """
         Create an averaging filter with 2 stages
         """
@@ -12,12 +12,12 @@ class quick_lpf:
         self.nTaps1 = nT1
         self.nTaps2 = nT2
         # Limit factors
-        self.limitFactor1 = 0.45
+        self.limitFactor1 = 0.35
         self.limitFactor2 = 1 - self.limitFactor1
         # Create the queues to contain the data
         self.queue1 = deque(maxlen=self.nTaps1)
         self.queue2 = deque(maxlen=self.nTaps2)
-        self.filterGain = 1.2
+        self.filterGain = 1.1
 
     def filter(self, new_val):
         # Feed the 1st queue
@@ -29,7 +29,7 @@ class quick_lpf:
         total_q2 = sum(self.queue2) / float(self.nTaps2)
         # Apply limiting factor
         ret_val = total_q1 * self.limitFactor1 + total_q2 * self.limitFactor2
-        return ret_val
+        return ret_val * self.filterGain
 
 
 def test_filter():
@@ -37,7 +37,7 @@ def test_filter():
     step = np.concatenate((np.zeros(N),np.ones(N)))
     ramp = np.concatenate((np.zeros(N//2),np.linspace(0,100,N//2), np.linspace(100,0,N//2), np.zeros(N//2)))
 
-    lpf_step = quick_lpf(nT1 = 1, nT2=20)
+    lpf_step = quick_lpf(nT1 = 3, nT2=30)
     lpf_ramp = quick_lpf(nT1 = 1, nT2=20)
 
     filtered_step = []
