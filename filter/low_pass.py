@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 from collections import deque
+import their_lpf
 
 class quick_lpf:
     def __init__(self, nT1=5, nT2=25):
