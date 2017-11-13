@@ -70,7 +70,10 @@ print(i)  # 1
 ```
 The primitives are **not** passed as references, but rather as copies.
 
-
+#### Compile a python script for correctness
+```
+python -m py_compile xpad_diag_helper.py
+```
 
 #### Get import paths
 [https://stackoverflow.com/questions/5751292/how-to-get-current-import-paths-in-python](https://stackoverflow.com/questions/5751292/how-to-get-current-import-paths-in-python)
