@@ -84,3 +84,46 @@ The path locations that python cheks by default can be inspected in sys.path.
 import sys
 print sys.path
 ```
+
+#### Class (static) variables in python 
+
+A static variable is a variable which is shared among all the instances of the class, if its
+value changes, changes for all the instances. Also does NOT need an instance of the class
+to exists.<br>
+For example:
+```python
+class A:
+  static_variable = "I exist"
+  def __init__(self):
+    self.non_static_var = "I need an instance to exist"
+print(A.static_variable)
+print(A.non_static_var)
+```
+
+Every object can access the static variable
+```python
+class B:
+  shared_var = "I'm shared"
+  def __init__(self):
+    self.instance_only_var = "Im only for my object"
+   
+ib_1 = B()
+ib_2 = B()
+print(B.shared_var)
+
+print(ib_2.shared_var)
+print(ib_1.shared_var)
+ib_2.shared_var = "catorce"
+
+print(ib_2.shared_var)
+print(ib_1.shared_var)
+####
+print(ib_2.instance_only_var)
+print(ib_1.instance_only_var)
+ib_2.instance_only_var = "only for ib2"
+print(ib_2.instance_only_var)
+print(ib_1.instance_only_var)
+```
+
+```python
+```
