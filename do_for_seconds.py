@@ -1,22 +1,25 @@
-
+#!/usr/bin/python
 """
 Python perform an action for a certain amount of time
 """
+import time
 
-from datetime import datetime
-
-def do_for_seconds(n, action):
-    _now = datetime.now()
-    stop = _now.second + n
-    while(datetime.now().second < stop):
-        print("Second:" + str(datetime.now().second))
-        action()
+def get_lapse(s):
+    stop = int(time.time() + s)
+    def do_for_seconds():
+        while(int(time.time()) < stop):
+            print("Second:" + str(int(time.time())) + " Stop: " + str(int(stop)))
+            return True
+        return False
+    return do_for_seconds
 
 def print_stuff():
     print("ss")
 
 def main():
-    do_for_seconds(5, print_stuff)
+    lap = get_lapse(5)
+    while(lap() == True):
+        print "."
 
 if __name__ == "__main__":
     main()
