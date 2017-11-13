@@ -85,7 +85,7 @@ import sys
 print sys.path
 ```
 
-#### Class (static) variables in python 
+#### [Class (static) variables in python](https://stackoverflow.com/questions/68645/static-class-variables-in-python)
 
 A static variable is a variable which is shared among all the instances of the class, if its
 value changes, changes for all the instances. Also does NOT need an instance of the class
