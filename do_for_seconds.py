@@ -5,12 +5,13 @@ Python perform an action for a certain amount of time
 import time
 
 def get_lapse(s):
+    """
+    This function returns a close wich will return true while the time
+    period is still valid
+    """
     stop = int(time.time() + s)
     def do_for_seconds():
-        while(int(time.time()) < stop):
-            print("Second:" + str(int(time.time())) + " Stop: " + str(int(stop)))
-            return True
-        return False
+        return int(time.time()) < stop
     return do_for_seconds
 
 def print_stuff():
@@ -18,7 +19,7 @@ def print_stuff():
 
 def main():
     lap = get_lapse(5)
-    while(lap() == True):
+    while(lap()):
         print "."
 
 if __name__ == "__main__":
