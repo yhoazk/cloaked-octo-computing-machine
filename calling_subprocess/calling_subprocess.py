@@ -13,4 +13,5 @@ import time
 """
 Calling a test application written in java
 """
-subprocess.Popen(["java", "test_app"], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+result = subprocess.Popen(["java", "test_app"], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+print "Result:" + str(result)
