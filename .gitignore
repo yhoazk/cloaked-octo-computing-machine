@@ -52,3 +52,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# For test subprocess
+*.class
+*.jar
