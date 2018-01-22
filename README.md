@@ -45,6 +45,13 @@ sudo /opt/anaconda3/bin/conda install pyqt
 t="10" if 4 < 5 else "22"
 ```
 
+### Debug
+When there are several python versions in the same PC to specify which `pdb` should be used try:
+```sh
+python3 -m pdb <script_name>.py
+# for python 2
+python -m pdb <script_name>.py
+```
 
 #### References in python
 
