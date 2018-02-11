@@ -134,3 +134,11 @@ print(ib_1.instance_only_var)
 
 ```python
 ```
+
+
+### Get the value in little endian of an instruction:
+```python
+'/bin/sh'[::-1].encode().hex()
+'68732f6e69622f'
+```
+
