@@ -19,11 +19,11 @@ Useful to generate more samples to train CNNs.
 
 
 
-### How to solve the error in anaconda 
+### How to solve the error in anaconda
 
 > This application failed to start because it could not find or load the Qt platform plugin "xcb"
 >in "".
-> 
+>
 >Reinstalling the application may fix this problem.
 >Abortado ('core' generado)
 
@@ -38,7 +38,7 @@ sudo /opt/anaconda3/bin/conda install qt
 sudo /opt/anaconda3/bin/conda install pyqt
 ```
 
-## Notes 
+## Notes
 
 ### ternary operator:
 ```python
@@ -113,7 +113,7 @@ class B:
   shared_var = "I'm shared"
   def __init__(self):
     self.instance_only_var = "Im only for my object"
-   
+
 ib_1 = B()
 ib_2 = B()
 print(B.shared_var)
@@ -142,3 +142,21 @@ print(ib_1.instance_only_var)
 '68732f6e69622f'
 ```
 
+
+### Why python sucks
+
+- The Python interpreter is not thread safe, so multithreading doesn't actually work (https://wiki.python.org/moin/GlobalInterpreterLock)
+- Python contains features that are known to just plain not work
+    - round doesn't actually round numbers. (https://docs.python.org/2/library/functions.html#round)  The notion of rounding a base10 number is fundamentally a base10 operation.  Why the hell would you try to do it in base 2?
+    - os.path.commonprefix doesn't actually return valid paths (https://docs.python.org/2/library/os.path.html#os.path.commonprefix)
+- Python's regex engine is obtuse and slow (http://glennklockwood.blogspot.com/2012/04/revisiting-perl-and-python-speed.html)
+- MAJOR changes between MINOR revisions (2.6, 2.7)
+    - subprocess.check_output
+    - the "with" statement
+- MAJOR changes between 2.0 and 3.0, like redefining fundamental math operations (https://www.python.org/dev/peps/pep-0238/)
+- Time doesn't work
+    - e.g., time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(time.strftime("%s", time.gmtime()))))
+    - good luck trying to get a datetime.tzinfo object for the local timezone (http://stackoverflow.com/questions/1681143/how-to-get-tz-info-object-corresponding-to-current-timezone)
+- is neither pass-by-value vs pass-by-reference
+    - programmer has to mentrally track the mutability of the type of object being passed around
+    - this, combined with Python's lack of strong typing, make this a really fragile way to program
