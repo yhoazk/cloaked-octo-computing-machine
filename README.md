@@ -54,7 +54,11 @@ python -m pdb <script_name>.py
 ```
 
 #### References in python
+![mutt](./mutt.png)
 
+[http://effbot.org/zone/call-by-object.htm](http://effbot.org/zone/call-by-object.htm)<br>
+[http://effbot.org/zone/python-objects.htm](http://effbot.org/zone/python-objects.htm)<br>
+<br>
 Here is an example on how python hides memory:
 ```python
 def dict_modifier(d, key):

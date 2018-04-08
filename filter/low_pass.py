@@ -41,6 +41,8 @@ def test_filter():
     lpf_step = quick_lpf(nT1 = 3, nT2=30)
     lpf_ramp = quick_lpf(nT1 = 1, nT2=20)
 
+#    oter_filter = their_lpf.LowPassFilter()
+
     filtered_step = []
     filtered_ramp = []
 
