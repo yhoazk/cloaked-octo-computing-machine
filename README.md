@@ -44,6 +44,12 @@ sudo /opt/anaconda3/bin/conda install pyqt
 ```python
 t="10" if 4 < 5 else "22"
 ```
+### Dict max or min or any lambda:
+
+```py
+d = {'a':1, 'b':22, 'c':10}
+print("Max val: {}".format(d[max(d, key=d.get)]))
+```
 
 ### Debug
 When there are several python versions in the same PC to specify which `pdb` should be used try:
