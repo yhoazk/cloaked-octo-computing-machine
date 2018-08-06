@@ -3,8 +3,8 @@
 import sys
 import urllib
 
-print("Its not working,
-seehttps://stackoverflow.com/questions/47916737/ipython-import-and-python-import-are-different ")
+print("Its not working, \
+see https://stackoverflow.com/questions/47916737/ipython-import-and-python-import-are-different ")
 
 def decode_url(url):
     return urllib.parse.unquote(url)
