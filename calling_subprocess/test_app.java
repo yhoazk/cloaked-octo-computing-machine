@@ -17,5 +17,6 @@ public class test_app
             time0--;
             time1 = 5;
         }
+        System.exit(9);
     }
 }

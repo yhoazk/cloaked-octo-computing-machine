@@ -11,7 +11,14 @@ import subprocess
 import time
 
 """
-Calling a test application written in java
+Calling a test application written in java, and waiting for it to finish
 """
-result = subprocess.Popen(["java", "test_app"], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
-print "Result:" + str(result)
+child = subprocess.Popen(["java", "test_app"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout = child.communicate()[0]
+print("StdOut:" + str(stdout))
+
+"""
+Get the retvalue from the executed binary
+"""
+
+print("Return code:" + str(child.returncode))
