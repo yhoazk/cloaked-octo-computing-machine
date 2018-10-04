@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test_suite1" tests="1" failures="0" errors="1">
+    <testcase name="test_case1" status="run" duration="5" time="5"><error message="exited with error code 1"></error>
+    <system-out><![CDATA[sfsdfsdf
+    sdf
+    sdf
+    sd
+    fs
+    dfsdfsdfsdfsf<yx<yxdadyxyfsfdsdfsyxfsefsfesfwe>fwef>rgergrgdgdfgdgdfgdgddfgdfgdfgdfgdg
+
+FAILED (failures=2)]]></system-out> </testcase>
+  </testsuite>
+</testsuites>

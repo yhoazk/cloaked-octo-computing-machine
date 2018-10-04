@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite name="launch.nosetests" tests="4" errors="1" failures="0" skip="0">
+  <testcase classname="test_launch_with_coroutine" name="test_launch_with_coroutine" time="0.031">
+    <error type="builtins.NotImplementedError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;asyncio: DEBUG: Using selector: SelectSelector&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------">
+      <![CDATA[  File "C:\tools\python\lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\tools\python\lib\unittest\case.py", line 577, in run
+    testMethod()
+  File "C:\tools\python\lib\site-packages\nose\case.py", line 198, in runTest
+    self.test(*self.arg)
+  File "C:\Jenkins\workspace\ros2_batch_ci_windows\workspace\src\ros2\launch\launch\test\test_launch_with_coroutine.py", line 55, in test_launch_with_coroutine
+    rc = default_launcher.launch()
+  File "C:\Jenkins\workspace\ros2_batch_ci_windows\workspace\src\ros2\launch\launch\launch\launcher.py", line 49, in launch
+    returncode = loop.run_until_complete(self._run())
+  File "C:\tools\python\lib\asyncio\base_events.py", line 316, in run_until_complete
+    return future.result()
+  File "C:\tools\python\lib\asyncio\futures.py", line 275, in result
+    raise self._exception
+  File "C:\tools\python\lib\asyncio\tasks.py", line 238, in _step
+    result = next(coro)
+  File "C:\Jenkins\workspace\ros2_batch_ci_windows\workspace\src\ros2\launch\launch\launch\launcher.py", line 68, in _run
+    yield from self._spawn_process(index)
+  File "C:\Jenkins\workspace\ros2_batch_ci_windows\workspace\src\ros2\launch\launch\launch\launcher.py", line 228, in _spawn_process
+    **kwargs)
+  File "C:\tools\python\lib\asyncio\base_events.py", line 944, in subprocess_exec
+    bufsize, **kwargs)
+  File "C:\tools\python\lib\asyncio\coroutines.py", line 141, in coro
+    res = func(*args, **kw)
+  File "C:\tools\python\lib\asyncio\base_events.py", line 248, in _make_subprocess_transport
+    raise NotImplementedError
+
+-------------------- >> begin captured logging << --------------------
+asyncio: DEBUG: Using selector: SelectSelector
+--------------------- >> end captured logging << ---------------------]]>
+    </error>
+    <system-err><![CDATA[launch
+]]></system-err>
+  </testcase>
+  <testcase classname="test_module_level_launch" name="test_one" time="1.000">
+    <system-out><![CDATA[(foo) pid 1584: ['C:\\tools\\python\\python.exe', '-u', 'C:\\Jenkins\\workspace\\ros2_batch_ci_windows\\workspace\\src\\ros2\\launch\\launch\\test\\counter.py', '--limit', '15', '--sleep', '0.5'] (stderr > stdout, all > file:C:\Windows\TEMP\foo_celvr29w)
+]]></system-out>
+    <system-err><![CDATA[one
+]]></system-err>
+  </testcase>
+  <testcase classname="test_module_level_launch" name="test_two" time="1.001">
+    <system-err><![CDATA[two
+]]></system-err>
+  </testcase>
+  <testcase classname="test_module_level_launch" name="test_three" time="1.016">
+    <system-err><![CDATA[three
+]]></system-err>
+  </testcase>
+</testsuite>
+</testsuites>
