@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="3" disabled="0" errors="0" time="0.079" name="AllTests">
+  <testsuite name="SvcDcmTest" tests="5" failures="3" disabled="0" errors="0" time="0.078">
+    <testcase name="SetupTearDown" status="run" time="0.029" classname="SvcDcmTest" />
+    <testcase name="IncomingNotResponsible" status="run" time="0.001" classname="SvcDcmTest">
+      <failure message="Value of: rt&#x0A;  Actual: 4138816&#x0A;Expected: uds::DiagReturnCode::NOT_RESPONSIBLE&#x0A;Which is: 254" type=""><![CDATA[g:/js/workspace/WPT_Cpm_UT_Ctc/_externals/Compositions/WptCpmBsw/Components/svcDcmAdapter/test/src/SvcDcmTest.cpp:160
+Value of: rt
+  Actual: 4138816
+Expected: uds::DiagReturnCode::NOT_RESPONSIBLE
+Which is: 254]]></failure>
+    </testcase>
+    <testcase name="IncomingRdbiWrongFormat" status="run" time="0" classname="SvcDcmTest">
+      <failure message="Value of: rt&#x0A;  Actual: 4138816&#x0A;Expected: uds::DiagReturnCode::ISO_INVALID_FORMAT&#x0A;Which is: 19" type=""><![CDATA[g:/js/workspace/WPT_Cpm_UT_Ctc/_externals/Compositions/WptCpmBsw/Components/svcDcmAdapter/test/src/SvcDcmTest.cpp:173
+Value of: rt
+  Actual: 4138816
+Expected: uds::DiagReturnCode::ISO_INVALID_FORMAT
+Which is: 19]]></failure>
+    </testcase>
+    <testcase name="IncomingRdbi" status="run" time="0" classname="SvcDcmTest" />
+    <testcase name="IncomingRdbiWrongSession" status="run" time="0" classname="SvcDcmTest">
+      <failure message="Value of: rt&#x0A;  Actual: 4138816&#x0A;Expected: uds::DiagReturnCode::ISO_SERVICE_NOT_SUPPORTED_IN_ACTIVE_SESSION&#x0A;Which is: 127" type=""><![CDATA[g:/js/workspace/WPT_Cpm_UT_Ctc/_externals/Compositions/WptCpmBsw/Components/svcDcmAdapter/test/src/SvcDcmTest.cpp:199
+Value of: rt
+  Actual: 4138816
+Expected: uds::DiagReturnCode::ISO_SERVICE_NOT_SUPPORTED_IN_ACTIVE_SESSION
+Which is: 127]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

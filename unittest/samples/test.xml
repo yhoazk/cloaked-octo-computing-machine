@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ara/com/test/api/utils/test/test_templatetype" tests="1" failures="0" errors="1">
+    <testcase name="ara/com/test/api/utils/test/test_templatetype" status="run" duration="3" time="3"><error message="exited with error code 1"></error></testcase>
+    <system-out><![CDATA[test_find_class_template (__main__.Test) ... ok
+test_find_class_template_constructor (__main__.Test) ... ok
+test_find_class_template_destructor (__main__.Test) ... ok
+test_find_class_template_field (__main__.Test) ... ok
+test_find_class_template_fields (__main__.Test) ... ok
+test_find_class_template_method (__main__.Test) ... ok
+test_find_class_template_methods (__main__.Test) ... ok
+test_find_type_alias (__main__.Test) ... FAIL
+test_template (__main__.Test) ... ok
+
+======================================================================
+FAIL: test_find_type_alias (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/q453870/.cache/bazel/_bazel_q453870/76ee788f0404cc21b39ab4651a01f439/sandbox/linux-sandbox/1/execroot/aas_platform/bazel-out/k8-py3-fastbuild/bin/ara/com/test/api/utils/test/test_templatetype.runfiles/aas_platform/ara/com/test/api/utils/test/test_templatetype.py", line 20, in test_find_type_alias
+    self.assertTrue(find_obj_in_tree(self.tu.cursor, template, self.verbose))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.441s
+
+FAILED (failures=1)]]></system-out>
+  </testsuite>
+</testsuites>
