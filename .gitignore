@@ -56,3 +56,5 @@ target/
 # For test subprocess
 *.class
 *.jar
+
+*~

@@ -12,17 +12,14 @@ def get_staticstics(path):
     failed = len(tr.failures)
     test = tr.testsRun
     skipped = len(tr.skipped)
+    tc_time = 0
     details = ["Test Name: {} \nTest Series: {} \n{}".format(tc.methodname, tc.classname, tc.message) for tc, _ in tr.failures]
+    tc_time = sum([tc.time.total_seconds() for tc, _ in tr.failures])
     print("\n\n".join(details))
-
-    xml  = ElementTree.parse(path).getroot()
-    disabled = 0
-    if xml.tag == 'testsuites' and 'disabled' in xml.attrib:
-        disabled = int(xml.attrib['disabled'])
-    else:
-        # disabled not in testsuites, collect the disabled tests in testsuite
-        disabled = sum(int(ts.attrib['disabled']) for ts in xml if ts.tag == 'testsuite' and 'disabled' in ts.attrib)
-    print("Failed {}  Total Test: {} Skipped {} Disabled {}".format(failed, test, skipped, disabled))
+    print("Failed {}  Total Test: {} Skipped {}".format(failed, test, skipped))
+#    print(type(tr.time.total_seconds()))
+    if tr.time is not None:
+        print("PATH: {}\nTime {} ".format(path, tr.time.total_seconds()))
 
 get_staticstics("../samples/gtest_with_failure.xml")
 print(":"*80)
@@ -36,3 +33,4 @@ get_staticstics("../samples/test.xml")
 print(":"*80)
 get_staticstics("../samples/report.xml")
 print(":"*80)
+
