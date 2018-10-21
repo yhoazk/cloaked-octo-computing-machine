@@ -98,3 +98,6 @@ print( c1 < c2) # Became possible because we have added __lt__ method
 print(c3) # Became possible because we have added __str__ method
 
 ```
+
+For Classes and any object in order to be callable, the metod `__call__` must
+be implemented. This is useful when usign python decorators.

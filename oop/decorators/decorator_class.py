@@ -20,3 +20,7 @@ if __name__ == "__main__":
 
 
 # TODO: how to decorate "intercept" a class overloaded attribute
+'''
+The decorator must be callable, which is short means that it must implement the
+function __call__ if it's a class.
+'''
