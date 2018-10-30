@@ -37,8 +37,8 @@ req_table = {
 }
 
 
-def count_prop(prop, with_val, rq_table):
-    return len(list(filter(lambda tc : tc[1][prop] == with_val, rq_table.items())))
+def count_prop(prop, with_val, rq_table, invert=False):
+    return len(list(filter(lambda tc : (tc[1][prop] == with_val)^invert, rq_table.items())))
 
 print("Number of tst: {}".format(len(req_table)))
 print("Rstat passing: {}".format(count_prop('R_STAT', True, req_table)))
