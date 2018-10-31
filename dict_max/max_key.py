@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import re
 """
 Demo for the use case when we want to get the key with the max value in a
 dictionary
@@ -49,3 +50,26 @@ print("Vstat failing: {}".format(count_prop('V_STAT', False, req_table)))
 
 print("Nr of test X: {}".format(count_prop('TYPE', 'X', req_table)))
 print("Nr of test Y: {}".format(count_prop('TYPE', 'Y', req_table)))
+
+
+
+def parse_md(file="table_a.md"):
+    #is_table_sep = re.compile(r"^(\|\s?:?-+:?\s?)+\|$") # ^((\|\s?:?-+:?\s?)+\|?)$
+    #is_table_sep = re.compile(r"^((\|\s?:?-+:?\s?)+\|?)$")
+    is_table_sep = re.compile(r"(\|\s?:?-+:?\s?)")
+    title_fields = re.compile(r"(\|\s?[A-Za-z0-9\s]*)")
+    with open(file, 'r') as table_file:
+        past_line = ""
+        for line in table_file:
+            table_match = is_table_sep.match(line)
+            if table_match is not None:
+                print("Table width: {}".format(len(table_match.groups())))
+                print("last line")
+                print(past_line)
+                
+                print([m.replace(" ", "") for m in title_fields.findall(past_line) ])
+
+            past_line = line
+
+print(20*"-" + "Parse Line" + 20*"-")
+parse_md()
