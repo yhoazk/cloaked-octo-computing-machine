@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Given an actual point and the target point
 calculate the speeds such as the speed at the
@@ -12,7 +12,8 @@ import matplotlib.pyplot as plt
 initial_point = 250
 final_point   = 400
 
-initial_speed  = 70
+initial_speed = 70
+final_speed = 10
 
 
 initial_buffer = np.ones(20) # store the last speeds
@@ -20,8 +21,6 @@ def get_speeds(init_indx, final_indx, current_speed):
     indx = range(init_indx, final_indx)
     speeds = np_interp(indx, initial_buffer, )
     return ()
-
-
 
 def main():
     points, speeds = get_speeds(initial_point, final_point, initial_speed)
