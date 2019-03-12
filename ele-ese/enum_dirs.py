@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-
+'''
+Enumerating directories
+'''
 
 import os
 from datetime import date
