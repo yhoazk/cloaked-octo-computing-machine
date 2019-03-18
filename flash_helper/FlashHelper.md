@@ -7,14 +7,11 @@ bazel into a specific USB drive.
 - `zenity`
 - `gitpython`
 
-Put the script in a locatio where only root can access. The command needs to
+Put the script in a location where only root can access. The command needs to
 be run as sudo, then if the regular user account is compromised the script
 contents could be changed and run as su.
 
 ## zenity
-
-
-
 
 ## udev
 
