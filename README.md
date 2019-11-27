@@ -153,6 +153,19 @@ print(ib_1.instance_only_var)
 ```
 
 
+### Installed python not found
+
+When installing with `pip --user` the executable files go to the
+path specified by:
+
+
+```python
+python3 -m site --user-base
+```
+
+On windows the scripts go to `%USERPROFILE%\AppData\Roaming\Python\Scripts`
+
+
 ### Why python sucks
 
 - The Python interpreter is not thread safe, so multithreading doesn't actually work (https://wiki.python.org/moin/GlobalInterpreterLock)
