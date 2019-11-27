@@ -19,7 +19,7 @@ final_speed = 10
 initial_buffer = np.ones(20) # store the last speeds
 def get_speeds(init_indx, final_indx, current_speed):
     indx = range(init_indx, final_indx)
-    speeds = np_interp(indx, initial_buffer, )
+    speeds = np_interp(current_speed, indx, initial_buffer )
     return ()
 
 def main():
