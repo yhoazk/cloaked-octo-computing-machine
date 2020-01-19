@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-compute the perspective trasnform M, given soruce and destination points
+compute the perspective trasnform M, given source and destination points
 M = cv2.getPerspectiveTransform(src, dst)
 
 Compute the inverse perspective transform
@@ -24,9 +24,14 @@ import numpy as np
 nx = 6 # number of inside corners in x
 ny = 9 # number of inside corners in y
 
+def get_abspath():
+    import os
+    abs_path = os.path.abspath(__file__)
+    return os.path.dirname(abs_path) + "/"
+    
 
 if __name__ == "__main__":
-    img = cv2.imread("pattern2.jpg")
+    img = cv2.imread(get_abspath() + "pattern.jpg")
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # find the chessboard corners
     ret, corners = cv2.findChessboardCorners(gray_img, (nx,ny), None)
