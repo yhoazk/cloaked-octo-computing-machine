@@ -1,4 +1,5 @@
 # cloaked-octo-computing-machine
+
 Experimental_Python
 
 
@@ -68,7 +69,7 @@ python -m pdb <script_name>.py
 Here is an example on how python hides memory:
 ```python
 def dict_modifier(d, key):
-  d.pop(key, None)
+d.pop(key, None)
 
 sample_dict = {'some_key': 'some value'}
 dict_modifier(sample_dict, 'some_key')
@@ -79,7 +80,7 @@ The function `dict_modifier` removes a value form the dictionary passed to it, i
 But python not always takes the arguments as references for example:
 ```python
 def adder(n):
-  n += 1
+n += 1
 
 i = 1
 adder(i)
@@ -110,9 +111,9 @@ to exists.<br>
 For example:
 ```python
 class A:
-  static_variable = "I exist"
-  def __init__(self):
-    self.non_static_var = "I need an instance to exist"
+static_variable = "I exist"
+def __init__(self):
+self.non_static_var = "I need an instance to exist"
 print(A.static_variable)
 print(A.non_static_var)
 ```
@@ -120,9 +121,9 @@ print(A.non_static_var)
 Every object can access the static variable
 ```python
 class B:
-  shared_var = "I'm shared"
-  def __init__(self):
-    self.instance_only_var = "Im only for my object"
+shared_var = "I'm shared"
+def __init__(self):
+self.instance_only_var = "Im only for my object"
 
 ib_1 = B()
 ib_2 = B()
@@ -164,6 +165,13 @@ python3 -m site --user-base
 ```
 
 On windows the scripts go to `%USERPROFILE%\AppData\Roaming\Python\Scripts`
+
+### Get headers for C/C++ libraries
+
+```
+python3 -c "from __future__ import print_function; from distutils import sysconfig; print(sysconfig.get_python_inc())"
+```
+
 
 
 ### Why python sucks
