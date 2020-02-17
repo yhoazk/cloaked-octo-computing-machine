@@ -15,9 +15,14 @@ def is_mac(dct):
     d = {}
     for prop, val in dct:
         if "address" == prop: # ignore MAC mismatch
+            print("XX")
             d["address"] = "xx:xx:xx:xx:xx:xx"
-        if "local" == prop and (':' in val): # ignore IPv6 addresses
+        elif "local" == prop and (':' in val): # ignore IPv6 addresses
             d["local"] = "::x"
+        elif "valid_life_time" == prop:
+            d["valid_life_time"] = 42
+        elif "preferred_life_time" == prop:
+            d["preferred_life_time"] = 42
         else:
             d[prop] = val
     return d
@@ -37,6 +42,8 @@ def sort_by_iface(json_list):
 
 
 if __name__ == "__main__":
+    #curr = current_config()
+    #exit()
     with open("golden_config.json") as cfg_fd:
         golden_cfg = sort_by_iface(json.load(cfg_fd, object_pairs_hook=is_mac))
         current_cfg = sort_by_iface(current_config())
