@@ -1,0 +1,191 @@
+[
+    {
+        "ifindex": 1,
+        "ifname": "lo",
+        "flags": [
+            "LOOPBACK",
+            "UP",
+            "LOWER_UP"
+        ],
+        "mtu": 65536,
+        "qdisc": "noqueue",
+        "operstate": "UNKNOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "loopback",
+        "address": "00:00:00:00:00:00",
+        "broadcast": "00:00:00:00:00:00",
+        "addr_info": [
+            {
+                "family": "inet",
+                "local": "127.0.0.1",
+                "prefixlen": 8,
+                "scope": "host",
+                "label": "lo",
+                "valid_life_time": 4294967295,
+                "preferred_life_time": 4294967295
+            },
+            {
+                "family": "inet6",
+                "local": "::1",
+                "prefixlen": 128,
+                "scope": "host",
+                "valid_life_time": 4294967295,
+                "preferred_life_time": 4294967295
+            }
+        ]
+    },
+    {
+        "ifindex": 2,
+        "ifname": "enp7s0",
+        "flags": [
+            "NO-CARRIER",
+            "BROADCAST",
+            "MULTICAST",
+            "UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "mq",
+        "master": "external_br",
+        "operstate": "DOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "xx:xx:xx:xx:xx:xx",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": []
+    },
+    {
+        "ifindex": 3,
+        "ifname": "wlp5s0",
+        "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP",
+            "LOWER_UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "mq",
+        "operstate": "UP",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "xx:xx:xx:xx:xx:xx",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": [
+            {
+                "family": "inet",
+                "local": "192.168.0.213",
+                "prefixlen": 24,
+                "broadcast": "192.168.0.255",
+                "scope": "global",
+                "dynamic": true,
+                "noprefixroute": true,
+                "label": "wlp5s0",
+                "valid_life_time": 3124,
+                "preferred_life_time": 3124
+            },
+            {
+                "family": "inet6",
+                "local": "::x",
+                "prefixlen": 64,
+                "scope": "global",
+                "dynamic": true,
+                "noprefixroute": true,
+                "valid_life_time": 150241,
+                "preferred_life_time": 63841
+            },
+            {
+                "family": "inet6",
+                "local": "::x",
+                "prefixlen": 64,
+                "scope": "link",
+                "noprefixroute": true,
+                "valid_life_time": 4294967295,
+                "preferred_life_time": 4294967295
+            }
+        ]
+    },
+    {
+        "ifindex": 4,
+        "ifname": "virbr0",
+        "flags": [
+            "NO-CARRIER",
+            "BROADCAST",
+            "MULTICAST",
+            "UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "noqueue",
+        "operstate": "DOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "12:12:12:12:12:12",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": [
+            {
+                "family": "inet",
+                "local": "192.168.122.1",
+                "prefixlen": 24,
+                "broadcast": "192.168.122.255",
+                "scope": "global",
+                "label": "virbr0",
+                "valid_life_time": 4294967295,
+                "preferred_life_time": 4294967295
+            }
+        ]
+    },
+    {
+        "ifindex": 5,
+        "ifname": "virbr0-nic",
+        "flags": [
+            "BROADCAST",
+            "MULTICAST"
+        ],
+        "mtu": 1500,
+        "qdisc": "fq_codel",
+        "master": "virbr0",
+        "operstate": "DOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "11:22:22:22:22:22",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": []
+    },
+    {
+        "ifindex": 6,
+        "ifname": "eth0.73",
+        "flags": [
+            "BROADCAST",
+            "MULTICAST"
+        ],
+        "mtu": 1500,
+        "qdisc": "noop",
+        "operstate": "DOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "ab:ab:ab:ab:ab:ab",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": []
+    },
+    {
+        "ifindex": 7,
+        "ifname": "external_br",
+        "flags": [
+            "BROADCAST",
+            "MULTICAST"
+        ],
+        "mtu": 1500,
+        "qdisc": "noop",
+        "operstate": "DOWN",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "12:21:bb:bb:bb:bb",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "addr_info": []
+    }
+]
