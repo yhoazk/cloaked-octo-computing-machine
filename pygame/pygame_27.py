@@ -3,7 +3,6 @@
 
 # Modulos
 import sys, pygame
-import pygame
 
 # Constantes
 WIDTH = 510
