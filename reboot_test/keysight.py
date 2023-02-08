@@ -3,24 +3,22 @@ import pyvisa
 
 
 class keysight:
-    def __init__(self):
-        pass
+    def __init__(self, tty):
+        print(f"Using {tty} for keysight")
 
     def __enter__(self):
         self.PowerOn()
         print("enter keysight")
-        pass
-    def __exit__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, exc_tb):
         self.PowerOff()
-        
+
         print("exit keysight")
-        pass
     def PowerOn(self):
         print("Keysight power on")
-        pass
 
     def PowerOff(self):
         print("Keysight power off")
-        pass
     def StartMeasurement(self):
         print("start measurement")
